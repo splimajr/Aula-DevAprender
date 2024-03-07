@@ -1,0 +1,164 @@
+﻿2020-05-01 11:12:39> Program: Starting Squirrel Updater: --install . --exeName=Teams_windows_x64_s_8D7EDD80F7EA5E2-7-0_.exe
+2020-05-01 11:12:41> Program: setup.json does not exist
+2020-05-01 11:12:41> Program: Starting install, writing to C:\Users\splim\AppData\Local\SquirrelTemp
+2020-05-01 11:12:41> Program: Running contextual installation logic
+2020-05-01 11:12:41> Program: ContextualInstaller returned: True. Using filename: Teams_windows_x64_s_8D7EDD80F7EA5E2-7-0_.exe
+2020-05-01 11:12:41> UpdateManager: using rootAppDirectory: C:\Users\splim\AppData\Local\Microsoft\Teams
+2020-05-01 11:12:41> Program: About to install to: C:\Users\splim\AppData\Local\Microsoft\Teams
+2020-05-01 11:12:41> Program: Setup.json exist, copying over
+2020-05-01 11:12:41> RegistryService: RegKeyExists: HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run does not have TeamsMachineInstaller
+2020-05-01 11:12:41> Program: CheckMsiAndTryAddInstallSource: Not MSI, no need to add HKEY_CURRENT_USER\Software\Microsoft\Office\Teams\InstallSource
+2020-05-01 11:12:41> CheckForUpdateImpl: Couldn't write out staging user ID, this user probably shouldn't get beta anything: System.IO.DirectoryNotFoundException: Não foi possível localizar uma parte do caminho 'C:\Users\splim\AppData\Local\Microsoft\Teams\packages\.betaId'.
+   em System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   em System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   em System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   em System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   em System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   em System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   em System.IO.File.WriteAllText(String path, String contents, Encoding encoding)
+   em Squirrel.UpdateManager.CheckForUpdateImpl.getOrCreateStagedUserId()
+2020-05-01 11:12:41> CheckForUpdateImpl: Failed to load local releases, starting from scratch: System.IO.DirectoryNotFoundException: Não foi possível localizar uma parte do caminho 'C:\Users\splim\AppData\Local\Microsoft\Teams\packages\RELEASES'.
+   em System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   em System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   em System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   em Squirrel.Utility.LoadLocalReleases(String localReleaseFile)
+   em Squirrel.UpdateManager.CheckForUpdateImpl.<CheckForUpdate>d__2.MoveNext()
+2020-05-01 11:12:41> CheckForUpdateImpl: Reading RELEASES file from C:\Users\splim\AppData\Local\SquirrelTemp
+2020-05-01 11:12:41> CheckForUpdateImpl: First run or local directory is corrupt, starting from scratch
+2020-05-01 11:12:41> ApplyReleasesImpl: No delta packages found. Applying current release package.
+2020-05-01 11:12:41> ApplyReleasesImpl: getting squirrel aware apps failed with exception Não foi possível localizar uma parte do caminho 'C:\Users\splim\AppData\Local\Microsoft\Teams\current'.
+2020-05-01 11:12:41> ApplyReleasesImpl: Writing files to app directory: C:\Users\splim\AppData\Local\Microsoft\Teams\current
+2020-05-01 11:13:04> ApplyReleasesImpl: Squirrel Enabled Apps: [C:\Users\splim\AppData\Local\Microsoft\Teams\current\Teams.exe]
+2020-05-01 11:13:09> ApplyReleasesImpl: About to RemoveOldShorcuts for Teams.exe, rootAppDir C:\Users\splim\AppData\Local\Microsoft\Teams
+2020-05-01 11:13:09> RegistryService: TryGetRegKey: HKEY_CURRENT_USER\Software\Policies\Microsoft\Cloud\Office\16.0\Teams does not exist
+2020-05-01 11:13:09> ApplyReleasesImpl: Registry value Software\Policies\Microsoft\Cloud\Office\16.0\Teams\PreventFirstLaunchAfterInstall is not set
+2020-05-01 11:13:09> RegistryService: TryGetRegKey: HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\Teams does not exist
+2020-05-01 11:13:09> ApplyReleasesImpl: Registry value Software\Policies\Microsoft\Office\16.0\Teams\PreventFirstLaunchAfterInstall is not set
+2020-05-01 11:13:09> RegistryService: TryGetRegKey: HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Teams does not exist
+2020-05-01 11:13:09> ApplyReleasesImpl: Registry value Software\Microsoft\Office\16.0\Teams\PreventFirstLaunchAfterInstall is not set
+2020-05-01 11:13:09> ApplyReleasesImpl: Registry flags are not set: proceed with default value False
+2020-05-01 11:13:09> ApplyReleasesImpl: Starting fixPinnedExecutables
+2020-05-01 11:13:09> ApplyReleasesImpl: Examining Pin: File Explorer.lnk
+2020-05-01 11:13:09> ApplyReleasesImpl: Examining Pin: Google Chrome.lnk
+2020-05-01 11:13:09> ApplyReleasesImpl: Fixing up tray icons
+2020-05-01 11:13:09> ApplyReleasesImpl: Couldn't rewrite shim RegKey, most likely no apps are shimmed: System.NullReferenceException: Referência de objeto não definida para uma instância de um objeto.
+   em Squirrel.UpdateManager.ApplyReleasesImpl.<unshimOurselves>b__21_0(RegistryView view)
+2020-05-01 11:13:09> ApplyReleasesImpl: Couldn't rewrite shim RegKey, most likely no apps are shimmed: System.NullReferenceException: Referência de objeto não definida para uma instância de um objeto.
+   em Squirrel.UpdateManager.ApplyReleasesImpl.<unshimOurselves>b__21_0(RegistryView view)
+2020-05-01 11:13:09> MeetingAddinInstaller: System.ArgumentException: Não é possível excluir uma árvore de subchave porque a subchave não existe.
+   em System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   em Microsoft.Win32.RegistryKey.DeleteSubKeyTree(String subkey, Boolean throwOnMissingSubKey)
+   em Microsoft.Win32.RegistryKey.DeleteSubKeyTree(String subkey)
+   em Squirrel.MeetingAddinInstaller.<InstallMeetingAddinAsync>d__15.MoveNext()
+2020-05-01 11:13:10> MeetingAddinInstaller: StagedAppDirectory does not exist. Using Current
+2020-05-01 11:13:10> MeetingAddinInstaller: There is no version.txt. Falling back to getting version from folder name
+2020-05-01 11:13:10> MeetingAddinInstaller: Version: 1.0.20031.2; addinPackageDirectory: 1.0.20031.2
+2020-05-01 11:13:10> MeetingAddinInstaller: .dead exists: False
+2020-05-01 11:13:10> MeetingAddinInstaller: path to .dead: C:\Users\splim\AppData\Local\Microsoft\TeamsMeetingAddin\1.0.20031.2\.dead
+2020-05-01 11:13:10> MeetingAddinInstaller: before cleanup unused versions
+2020-05-01 11:13:10> MeetingAddinInstaller: Addin directory exists. Copy was successful
+2020-05-01 11:13:11> MeetingAddinInstaller: Version 1.0.20031.2 of the meeting add-in is now installed
+2020-05-01 11:13:11> PresenceAddinInstaller: Installing Teams Presence addin for Outlook...
+2020-05-01 11:13:11> PresenceAddinInstaller: Copying C:\Users\splim\AppData\Local\Microsoft\Teams\current\resources\assets\tlb\Uc.tlb to C:\Users\splim\AppData\Local\Microsoft\TeamsPresenceAddin
+2020-05-01 11:13:11> PresenceAddinInstaller: Copying C:\Users\splim\AppData\Local\Microsoft\Teams\current\resources\assets\tlb\Uc.win32.tlb to C:\Users\splim\AppData\Local\Microsoft\TeamsPresenceAddin
+2020-05-01 11:13:11> PresenceAddinInstaller: check if UC TypeLib points to current\resources\assets\tlb\Uc.tlb
+2020-05-01 11:13:11> PresenceAddinInstaller: Registering UC Typelib WIN32 under HKCU...
+2020-05-01 11:13:13> PresenceAddinInstaller: UC Typelib WIN32 successfully registered to C:\Users\splim\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.win32.tlb under HKCU!
+2020-05-01 11:13:13> PresenceAddinInstaller: Registering UC Typelib WIN64 under HKCU...
+2020-05-01 11:13:13> PresenceAddinInstaller: UC Typelib WIN64 successfully registered to C:\Users\splim\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.tlb under HKCU!
+2020-05-01 11:13:13> ApplyReleasesImpl: cleanDeadVersions: for version 1.3.00.8663
+2020-05-01 11:13:13> ApplyReleasesImpl: cleanDeadVersions: exclude folder stage
+2020-05-01 11:13:15> RegistryService: TryDeleteRegKey: HKEY_CURRENT_USER\Software\Microsoft\Office\Teams not found
+9000> 2023-10-25 18:32:40> Program: Starting Squirrel Updater: --install .
+9000> 2023-10-25 18:32:40> Program: Starting install, writing to C:\Users\splim\AppData\Local\SquirrelTemp
+9000> 2023-10-25 18:32:40> Program: About to install to: C:\Users\splim\AppData\Local\Discord
+9000> 2023-10-25 18:32:40> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+9000> 2023-10-25 18:32:40> CheckForUpdateImpl: Reading RELEASES file from C:\Users\splim\AppData\Local\SquirrelTemp
+9000> 2023-10-25 18:32:40> CheckForUpdateImpl: Remote version 1.0.9020 differs from local 
+9000> 2023-10-25 18:32:40> CheckForUpdateImpl: First run or local directory is corrupt, starting from scratch
+9000> 2023-10-25 18:32:40> ApplyReleasesImpl: Writing files to app directory: C:\Users\splim\AppData\Local\Discord\app-1.0.9020
+9000> 2023-10-25 18:33:12> ApplyReleasesImpl: Moving file C:\Users\splim\AppData\Local\Discord\app-1.0.9020\lib\net45\app.ico to C:\Users\splim\AppData\Local\Discord\app-1.0.9020\app.ico
+9000> 2023-10-25 18:33:12> ApplyReleasesImpl: Moving file C:\Users\splim\AppData\Local\Discord\app-1.0.9020\lib\net45\chrome_100_percent.pak to C:\Users\splim\AppData\Local\Discord\app-1.0.9020\chrome_100_percent.pak
+9000> 2023-10-25 18:33:12> ApplyReleasesImpl: Moving file C:\Users\splim\AppData\Local\Discord\app-1.0.9020\lib\net45\chrome_200_percent.pak to C:\Users\splim\AppData\Local\Discord\app-1.0.9020\chrome_200_percent.pak
+9000> 2023-10-25 18:33:12> ApplyReleasesImpl: Moving file C:\Users\splim\AppData\Local\Discord\app-1.0.9020\lib\net45\d3dcompiler_47.dll to C:\Users\splim\AppData\Local\Discord\app-1.0.9020\d3dcompiler_47.dll
+9000> 2023-10-25 18:33:13> ApplyReleasesImpl: Moving file C:\Users\splim\AppData\Local\Discord\app-1.0.9020\lib\net45\Discord.exe to C:\Users\splim\AppData\Local\Discord\app-1.0.9020\Discord.exe
+9000> 2023-10-25 18:33:13> ApplyReleasesImpl: Moving file C:\Users\splim\AppData\Local\Discord\app-1.0.9020\lib\net45\ffmpeg.dll to C:\Users\splim\AppData\Local\Discord\app-1.0.9020\ffmpeg.dll
+9000> 2023-10-25 18:33:13> ApplyReleasesImpl: Moving file C:\Users\splim\AppData\Local\Discord\app-1.0.9020\lib\net45\icudtl.dat to C:\Users\splim\AppData\Local\Discord\app-1.0.9020\icudtl.dat
+9000> 2023-10-25 18:33:13> ApplyReleasesImpl: Moving file C:\Users\splim\AppData\Local\Discord\app-1.0.9020\lib\net45\installer.db to C:\Users\splim\AppData\Local\Discord\app-1.0.9020\installer.db
+9000> 2023-10-25 18:33:13> ApplyReleasesImpl: Moving file C:\Users\splim\AppData\Local\Discord\app-1.0.9020\lib\net45\libEGL.dll to C:\Users\splim\AppData\Local\Discord\app-1.0.9020\libEGL.dll
+9000> 2023-10-25 18:33:13> ApplyReleasesImpl: Moving file C:\Users\splim\AppData\Local\Discord\app-1.0.9020\lib\net45\libGLESv2.dll to C:\Users\splim\AppData\Local\Discord\app-1.0.9020\libGLESv2.dll
+9000> 2023-10-25 18:33:13> ApplyReleasesImpl: Moving file C:\Users\splim\AppData\Local\Discord\app-1.0.9020\lib\net45\resources.pak to C:\Users\splim\AppData\Local\Discord\app-1.0.9020\resources.pak
+9000> 2023-10-25 18:33:13> ApplyReleasesImpl: Moving file C:\Users\splim\AppData\Local\Discord\app-1.0.9020\lib\net45\snapshot_blob.bin to C:\Users\splim\AppData\Local\Discord\app-1.0.9020\snapshot_blob.bin
+9000> 2023-10-25 18:33:13> ApplyReleasesImpl: Moving file C:\Users\splim\AppData\Local\Discord\app-1.0.9020\lib\net45\v8_context_snapshot.bin to C:\Users\splim\AppData\Local\Discord\app-1.0.9020\v8_context_snapshot.bin
+9000> 2023-10-25 18:33:13> ApplyReleasesImpl: Moving file C:\Users\splim\AppData\Local\Discord\app-1.0.9020\lib\net45\vk_swiftshader_icd.json to C:\Users\splim\AppData\Local\Discord\app-1.0.9020\vk_swiftshader_icd.json
+9000> 2023-10-25 18:33:13> ApplyReleasesImpl: Moving file C:\Users\splim\AppData\Local\Discord\app-1.0.9020\lib\net45\updater.node to C:\Users\splim\AppData\Local\Discord\app-1.0.9020\updater.node
+9000> 2023-10-25 18:33:13> ApplyReleasesImpl: Moving file C:\Users\splim\AppData\Local\Discord\app-1.0.9020\lib\net45\vk_swiftshader.dll to C:\Users\splim\AppData\Local\Discord\app-1.0.9020\vk_swiftshader.dll
+9000> 2023-10-25 18:33:13> ApplyReleasesImpl: Moving file C:\Users\splim\AppData\Local\Discord\app-1.0.9020\lib\net45\vulkan-1.dll to C:\Users\splim\AppData\Local\Discord\app-1.0.9020\vulkan-1.dll
+9000> 2023-10-25 18:33:24> ApplyReleasesImpl: Squirrel Enabled Apps: [C:\Users\splim\AppData\Local\Discord\app-1.0.9020\Discord.exe]
+9000> 2023-10-25 18:33:25> Utility: Process Started: C:\Users\splim\AppData\Local\Discord\app-1.0.9020\Discord.exe --squirrel-install 1.0.9020, pid 17436
+9000> 2023-10-25 18:33:36> Utility: Received exitcode 0 from process C:\Users\splim\AppData\Local\Discord\app-1.0.9020\Discord.exe
+9000> 2023-10-25 18:33:36> ApplyReleasesImpl: ran C:\Users\splim\AppData\Local\Discord\app-1.0.9020\Discord.exe, pid 9516
+9000> 2023-10-25 18:33:36> ApplyReleasesImpl: Starting fixPinnedExecutables
+9000> 2023-10-25 18:33:36> ApplyReleasesImpl: fixPinnedExecutables: newCurrentFolder: app-1.0.9020
+9000> 2023-10-25 18:33:36> ApplyReleasesImpl: fixPinnedExecutables: enumerating path C:\Users\splim\AppData\Roaming\Microsoft\Windows\Start Menu failed: System.UnauthorizedAccessException: O acesso ao caminho 'C:\Users\splim\AppData\Roaming\Microsoft\Windows\Start Menu\Programas' foi negado.
+   em System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   em System.IO.FileSystemEnumerableIterator`1.AddSearchableDirsToStack(SearchData localSearchData)
+   em System.IO.FileSystemEnumerableIterator`1.MoveNext()
+   em System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   em System.IO.DirectoryInfo.InternalGetFiles(String searchPattern, SearchOption searchOption)
+   em System.IO.DirectoryInfo.GetFiles(String searchPattern, SearchOption searchOption)
+   em Squirrel.UpdateManager.ApplyReleasesImpl.fixPinnedExecutables(SemanticVersion newCurrentVersion)
+9000> 2023-10-25 18:33:37> ApplyReleasesImpl: Updating shortcut C:\Users\splim\Desktop\Discord.lnk
+9000> 2023-10-25 18:33:37> ApplyReleasesImpl: Fixing up tray icons
+9000> 2023-10-25 18:33:37> ApplyReleasesImpl: cleanDeadVersions: for version 1.0.9020
+9000> 2023-10-25 18:33:37> ApplyReleasesImpl: cleanDeadVersions: exclude current version folder app-1.0.9020
+t()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em Squirrel.Utility.<LogIfThrows>d__37.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em Squirrel.Update.Program.<Install>d__5.MoveNext()<---
+
+4404> 2023-10-25 18:33:06> Program: Starting Squirrel Updater: --install .
+4404> 2023-10-25 18:33:06> Program: Starting install, writing to C:\Users\splim\AppData\Local\SquirrelTemp
+4404> 2023-10-25 18:33:06> Program: About to install to: C:\Users\splim\AppData\Local\Discord
+4404> 2023-10-25 18:33:06> Program: Install path C:\Users\splim\AppData\Local\Discord already exists, burning it to the ground
+4404> 2023-10-25 18:33:06> IEnableLogger: Failed to remove existing directory on full install, is the app still running???: System.IO.IOException: O acesso ao caminho 'C:\Users\splim\AppData\Local\Discord' foi negado.
+   em System.IO.Directory.InternalMove(String sourceDirName, String destDirName, Boolean checkHost)
+   em Squirrel.Utility.<DeleteDirectory>d__22.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em Squirrel.Utility.<LogIfThrows>d__37.MoveNext()
+4404> 2023-10-25 18:33:06> Unhandled exception: System.AggregateException: Um ou mais erros. ---> System.IO.IOException: O acesso ao caminho 'C:\Users\splim\AppData\Local\Discord' foi negado.
+   em System.IO.Directory.InternalMove(String sourceDirName, String destDirName, Boolean checkHost)
+   em Squirrel.Utility.<DeleteDirectory>d__22.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em Squirrel.Utility.<LogIfThrows>d__37.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em Squirrel.Update.Program.<Install>d__5.MoveNext()
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   em System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   em System.Threading.Tasks.Task.Wait()
+   em Squirrel.Update.Program.executeCommandLine(String[] args)
+   em Squirrel.Update.Program.main(String[] args)
+---> (Exceção Interna N° 0) System.IO.IOException: O acesso ao caminho 'C:\Users\splim\AppData\Local\Discord' foi negado.
+   em System.IO.Directory.InternalMove(String sourceDirName, String destDirName, Boolean checkHost)
+   em Squirrel.Utility.<DeleteDirectory>d__22.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em Squirrel.Utility.<LogIfThrows>d__37.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em Squirrel.Update.Program.<Install>d__5.MoveNext()<---
+
