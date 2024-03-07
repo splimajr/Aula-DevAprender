@@ -5,3 +5,6 @@ sudo yum install -y python-pip
 
 Olá sou uma nova linha!
 Vou me mostrar pra você no próximo commit!
+
+Mudando a branch
+adicionando na branch staging
